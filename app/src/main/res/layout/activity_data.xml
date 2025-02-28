@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.Material3.ActionBar"
+        app:title="📊 Data Activity"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.Material3.ActionBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Event Summary Section -->
+    <LinearLayout
+        android:id="@+id/eventSummaryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Individual Event Counts -->
+        <TextView
+            android:id="@+id/tvEventA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event A: 0 events"
+            android:textSize="16sp"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvEventB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event B: 0 events"
+            android:textSize="16sp"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tvEventC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event C: 0 events"
+            android:textSize="16sp"
+            android:padding="4dp" />
+
+        <!-- Total Count -->
+        <TextView
+            android:id="@+id/tvTotalEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total events: 0"
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ListView for Events -->
+    <ListView
+        android:id="@+id/lvEventList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventSummaryContainer"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TechAssignment_1</string>
+    <string name="name_goes_here">Name goes here</string>
+    <string name="counter_3_name">Counter 3 Name</string>
+    <string name="maximum_counts">Maximum Counts</string>
+    <string name="save">Save</string>
+
+</resources>
+
